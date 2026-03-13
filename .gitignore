@@ -1,0 +1,10 @@
+################################################
+# Git Ignore for the life-leveling-cpp project #
+################################################
+
+# Binary dir(s)
+[Bb]uild
+[Oo]ut
+
+
+
