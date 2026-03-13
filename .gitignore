@@ -6,5 +6,6 @@
 [Bb]uild
 [Oo]ut
 
-
+# VS Code files/folders
+.vscode
 
