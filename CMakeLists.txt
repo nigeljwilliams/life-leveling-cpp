@@ -20,6 +20,9 @@ set(_EXECUTABLE_NAME LifeLevelingApp.exe)
 set(_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
 set(_SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 
+set(_CORE_SUBDIR "${_SRC_DIR}/core")
+set(_CORE_UTILS_SUBDIR "${_CORE_SUBDIR}/utils")
+
 # Add the Executable
 #
 add_executable(${_EXECUTABLE_NAME} "${_SRC_DIR}/Main.cpp")
@@ -27,3 +30,12 @@ add_executable(${_EXECUTABLE_NAME} "${_SRC_DIR}/Main.cpp")
 # Add include directories
 #
 target_include_directories(${_EXECUTABLE_NAME} PRIVATE ${_INCLUDE_DIR})
+
+# Add subdirectories
+#
+add_subdirectory(${_CORE_SUBDIR})
+add_subdirectory(${_CORE_UTILS_SUBDIR})
+
+# Link subdirectories
+#
+target_link_libraries(${_EXECUTABLE_NAME} PRIVATE core core-utils)

@@ -1,10 +1,8 @@
-#include <iostream>
-#include <stdlib.h>
+#include "core/LifeLevelingApp.h"
 
 int main(int argc, char** argv)
 {
-    std::cout << "Enter any key to continue..." << std::endl;
-    std::cin.get();
+    Core::LifeLevelingApp::Instance()->Run();
 
     return 0;
 }
